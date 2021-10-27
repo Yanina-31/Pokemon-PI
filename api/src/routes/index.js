@@ -3,13 +3,14 @@ const axios = require('axios');
 // Importar todos los routers;
 // Ejemplo: const authRouter = require('./auth.js');
 const pokemons = require('./pokemons.js')
-// const type = require('./type.js')
+const types = require('./type.js')
 const router = Router();
 
 // Configurar los routers
 // Ejemplo: router.use('/auth', authRouter);
 
 router.use('/pokemons', pokemons)
-// router.use('/type', type)
+router.use('/pokemons/name', pokemons)
+router.use('/types', types)
 
 module.exports = router;
